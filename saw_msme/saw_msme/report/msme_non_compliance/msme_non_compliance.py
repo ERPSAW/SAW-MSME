@@ -38,7 +38,7 @@ def get_columns(filters):
 def get_data(filters):
 	data = []
 	raw_data_dict = {}
-	conditions = ""
+	conditions = "s.custom_msme_registered = 1"
 
 	if filters.get("ageing_based_on") == "Posting Date":
 		conditions += "pi.posting_date between %(from_date)s and %(to_date)s"
